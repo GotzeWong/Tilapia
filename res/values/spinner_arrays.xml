@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="省份">
+        <item >江苏</item>
+        <item >河南</item>
+        <item >河北</item>
+        <item >安徽</item>
+        <item >湖北</item>
+        <item >新疆</item>
+    </string-array>
+    <string-array name="江苏">
+        <item >宿迁</item>
+        <item >无锡</item>
+        <item >南京</item>
+    </string-array>
+    <string-array name="河北">
+        <item >石家庄</item>
+    </string-array>
+    <string-array name="河南">
+        <item >安阳</item>
+    </string-array>
+    <string-array name="安徽">
+        <item >六安</item>
+    </string-array>
+    <string-array name="湖北">
+        <item >武汉</item>
+    </string-array>
+    <string-array name="新疆">
+        <item >哈密</item>
+    </string-array>
+    
+</resources>

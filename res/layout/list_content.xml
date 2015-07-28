@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" 
+	    android:layout_marginTop="5dp"
+	    android:layout_marginRight="6dp"
+	    android:layout_marginLeft="6dp"
+	    android:layout_marginBottom="2dp"
+	    android:background="@drawable/android_big_button_disable"
+	    >
+		
+        <ImageView
+	        android:id="@+id/circle"
+	        android:layout_width="20dp"
+	        android:layout_height="20dp"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/circle" 
+	        />
+        
+	    <TextView
+	        android:id="@+id/list_text"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_toRightOf="@id/circle"
+	        android:layout_centerVertical="true"
+	        android:paddingLeft="5dp"
+	        android:text="ceshi"
+	        android:textSize="18sp" 
+	        />
+	    <ImageView
+	        android:id="@+id/list_goto"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/goto_ini" 
+	        />
+	</RelativeLayout>
+
+	<GridLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="15dp"
+	    android:layout_marginLeft="30dp"
+	    android:layout_marginRight="6dp"
+	    android:background="@drawable/android_big_button_disable"
+	    android:columnCount="2"
+	    android:orientation="horizontal"
+	    android:rowCount="2" >
+
+		<LinearLayout 
+		    android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+		    >
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="峰值："
+		        android:textSize="13sp"
+		        android:textColor="#FF555555"
+		        />
+		    <TextView 
+		        android:id="@+id/text_max"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="100.00"
+		        android:textSize="13sp"
+		        android:textColor="#FFFF0000"
+		        />
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_horizontal"
+		    android:orientation="horizontal" >
+
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="谷值："
+		        android:textSize="13sp"
+		        android:textColor="#FF555555"
+		        />
+		    <TextView 
+		        android:id="@+id/text_min"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="50.00"
+		        android:textSize="13sp"
+		        android:textColor="#FFFF0000"
+		        />
+		</LinearLayout>
+		<LinearLayout 
+		    android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+		    >
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="均值："
+		        android:textSize="13sp"
+		        android:textColor="#FF555555"
+		        />
+		    <TextView 
+		        android:id="@+id/text_avg"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="89.00"
+		        android:textSize="13sp"
+		        android:textColor="#FFFF0000"
+		        />
+		</LinearLayout>
+	</GridLayout>
+</LinearLayout>

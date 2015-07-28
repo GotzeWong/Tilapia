@@ -1,16 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.jnu.tilapia.MainActivity$PlaceholderFragment" >
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/console_line_bottom"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/main_tab_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:background="@drawable/maintab_toolbar_bg"
+            android:orientation="horizontal"
+            android:paddingTop="2.0dip"
+            >
+
+            <RadioButton
+                android:id="@+id/main_tab_home"
+                style="@style/main_tab_bottom"
+                android:checked="true"
+                android:drawableTop="@drawable/icon_1_n"
+                android:text="@string/main_navigation_home" />
+
+            <RadioButton
+                android:id="@+id/main_tab_page1"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/icon_2_n"
+                android:text="@string/main_navigation_catagory" />
+
+            <RadioButton
+                android:id="@+id/main_tab_page2"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/icon_3_n"
+                android:text="@string/main_navigation_car" />
+
+            <RadioButton
+                android:id="@+id/main_tab_page3"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/icon_4_n"
+                android:text="@string/main_code_buy" />
+
+            <RadioButton
+                android:id="@+id/main_tab_page4"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/icon_5_n"
+                android:text="@string/main_navigation_more" />
+        </RadioGroup>
+    </LinearLayout>
 
 </RelativeLayout>

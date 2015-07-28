@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Tilapia</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">tilapia</string>
+    <string name="ActivityMainTitle">tilapia</string>
+    <string name="main_navigation_home">首页</string>
+    <string name="main_navigation_catagory">第一页</string>
+    <string name="main_navigation_car">第二页</string>
+    <string name="main_code_buy">第三页</string>
+    <string name="main_navigation_more">第四页</string>
+    <string name="app_close">关闭应用程序</string>
+    <string name="btn_cancel">取 消</string>
+    <string name="btn_ok">确 定</string>
+    <string name="cart_item_hint">购物车还是空的,快去选购吧~ !</string>
 
 </resources>
