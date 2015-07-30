@@ -1,15 +1,17 @@
 package com.jnu.tilapia_activity;
 
 import com.jnu.adapter.FragmentAdapter;
-import com.jnu.tilapia.R;
 
+import android.app.ActionBar;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.RadioButton;
 
 public class MainActivity extends FragmentActivity implements OnClickListener{

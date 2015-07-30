@@ -91,15 +91,14 @@ public abstract class AbstractDemoChart implements IDemoChart {
     renderer.setExternalZoomEnabled(true);
     renderer.setAxesColor(Color.RED);
     renderer.setGridColor(Color.GRAY);
-    renderer.setPanEnabled(false);
-    renderer.setMargins(new int[] { 40, 40, 40, 40 });
+    renderer.setMargins(new int[] { 40, 40, 20, 40 });
     int length = colors.length;
     for (int i = 0; i < length; i++) {
       XYSeriesRenderer r = new XYSeriesRenderer();
       r.setColor(colors[i]);
       r.setPointStyle(styles[i]);
-      r.setLineWidth(2);
-      r.setPointStrokeWidth(6);
+      r.setLineWidth(1);
+      r.setPointStrokeWidth(4);
       renderer.addSeriesRenderer(r);
     }
   }

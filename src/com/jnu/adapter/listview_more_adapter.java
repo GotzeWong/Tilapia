@@ -1,8 +1,8 @@
 package com.jnu.adapter;
 
-import com.jnu.tilapia.R;
-
 import java.util.zip.Inflater;
+
+import com.jnu.tilapia_activity.R;
 
 import android.content.Context;
 import android.support.v7.appcompat.R.string;

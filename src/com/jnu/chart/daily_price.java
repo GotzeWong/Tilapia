@@ -86,7 +86,9 @@ public class daily_price extends AbstractDemoChart{
 	    renderer.setShowGrid(true);
 	    renderer.setXLabelsAlign(Align.RIGHT);
 	    renderer.setYLabelsAlign(Align.RIGHT);
-	    renderer.setZoomButtonsVisible(true);
+	    renderer.setClickEnabled(true);
+	    renderer.setSelectableBuffer(30);
+//	    renderer.setZoomButtonsVisible(true);
 	    renderer.setMarginsColor(Color.WHITE);
 	    renderer.setPanEnabled(true);
 	    renderer.setPanLimits(new double[] { 0, 12, 0, 10 });

@@ -2,7 +2,7 @@ package com.jnu.fragment;
 
 import com.jnu.adapter.listview_more_adapter;
 import com.jnu.listenner.more_listview_item_listenner;
-import com.jnu.tilapia.R;
+import com.jnu.tilapia_activity.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

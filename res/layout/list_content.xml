@@ -14,22 +14,22 @@
 	    android:layout_marginRight="6dp"
 	    android:layout_marginLeft="6dp"
 	    android:layout_marginBottom="2dp"
-	    android:background="@drawable/android_big_button_disable"
+	    android:background="@drawable/edittext_normal"
 	    >
 		
         <ImageView
-	        android:id="@+id/circle"
+	        android:id="@+id/icon_monitor"
 	        android:layout_width="20dp"
 	        android:layout_height="20dp"
 	        android:layout_centerVertical="true"
-	        android:src="@drawable/circle" 
+	        android:src="@drawable/icon_monitor" 
 	        />
         
 	    <TextView
 	        android:id="@+id/list_text"
 	        android:layout_height="wrap_content"
 	        android:layout_width="wrap_content"
-	        android:layout_toRightOf="@id/circle"
+	        android:layout_toRightOf="@id/icon_monitor"
 	        android:layout_centerVertical="true"
 	        android:paddingLeft="5dp"
 	        android:text="ceshi"
@@ -48,10 +48,10 @@
 	<GridLayout
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:layout_marginBottom="15dp"
-	    android:layout_marginLeft="30dp"
+	    android:layout_marginBottom="8dp"
+	    android:layout_marginLeft="6dp"
 	    android:layout_marginRight="6dp"
-	    android:background="@drawable/android_big_button_disable"
+	    android:background="@drawable/edittext_normal"
 	    android:columnCount="2"
 	    android:orientation="horizontal"
 	    android:rowCount="2" >
@@ -61,10 +61,16 @@
 	    	android:layout_height="wrap_content"
 	    	android:orientation="horizontal"
 		    >
+		    <ImageView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+	        	android:src="@drawable/circle" 
+		        />
 		    <TextView 
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:text="峰值："
+		        android:text=" 塘口价："
 		        android:textSize="13sp"
 		        android:textColor="#FF555555"
 		        />
@@ -83,11 +89,17 @@
 		    android:layout_height="wrap_content"
 		    android:layout_gravity="center_horizontal"
 		    android:orientation="horizontal" >
-
+			
+		    <ImageView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+	        	android:src="@drawable/circle" 
+		        />
 		    <TextView 
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:text="谷值："
+		        android:text=" 批发价："
 		        android:textSize="13sp"
 		        android:textColor="#FF555555"
 		        />
@@ -105,10 +117,17 @@
 	    	android:layout_height="wrap_content"
 	    	android:orientation="horizontal"
 		    >
+		    
+		    <ImageView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+	        	android:src="@drawable/circle" 
+		        />
 		    <TextView 
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:text="均值："
+		        android:text=" 零售价："
 		        android:textSize="13sp"
 		        android:textColor="#FF555555"
 		        />

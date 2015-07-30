@@ -51,4 +51,5 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">1.0dip</item>
     </style>
+    
 </resources>

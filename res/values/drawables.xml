@@ -3,7 +3,7 @@
 
     <item type="drawable" name="transparent_background">#99000000</item>
 	<item type="drawable" name="transparent">#00000000</item>
-	 <item type="drawable" name="list_row_normal">#ffffffff</item>
+	 <item type="drawable" name="list_row_normal">#00ffffff</item>
     <item type="drawable" name="list_row_zeng">#fffff555</item>
     <item type="drawable" name="list_row_pressed">#ffeeeeee</item>
 </resources>
