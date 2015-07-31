@@ -41,12 +41,11 @@ public class compare_fresh_price extends Activity{
 	
 	private OnItemSelectedListener spinner1_listener;
 	private OnTouchListener chart_ontouchListener;
-	private OnClickListener button_listener,button_listener_show,textview_hide;
+	private OnClickListener button_listener,button_listener_show,textview_hide,showTagListener;;
 	private ArrayAdapter<String> adapter1,adapter2,adapter_size;
 	
 	private ArrayList<String> selected;
 	private boolean vis[];
-	private OnClickListener showTagListener;
 	private float oldX;
 	private float oldY;
 	public static int XOFFSET_L=40;

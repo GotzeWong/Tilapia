@@ -19,17 +19,17 @@ public class daily_price extends AbstractDemoChart{
 	
 	@Override
 	public String getName() {
-		return "罗非鱼价格变化图";
+		return "罗非鱼塘口价变化图";
 	}
 
 	@Override
 	public String getDesc() {
-		return "罗非鱼价格变化图(test)";
+		return "罗非鱼塘口价变化图(test)";
 	}
 
 	@Override
 	public Intent execute(Context context) {
-		String[] titles = new String[] { "塘口价", "批发价", "零售价"};
+		String[] titles = new String[] { "0.6~1.0(斤)", "1.0~1.6(斤)", "大于1.6(斤)"};
 		List<double[]> x = new ArrayList<double[]>();
 		List<double[]> values = new ArrayList<double[]>();
 		for (int i = 0; i < titles.length; i++) {
@@ -45,7 +45,7 @@ public class daily_price extends AbstractDemoChart{
 		for (int i = 0; i < length; i++) {
 			((XYSeriesRenderer) renderer.getSeriesRendererAt(i)).setFillPoints(true);
 		}
-		setChartSettings(renderer, "罗非鱼价格变化图", "月份", "单位：元/公斤", 0, 12.5, 0.5, 9.5, Color.RED, Color.RED);
+		setChartSettings(renderer, "罗非鱼塘口价变化图", "月份", "单位：元/公斤", 0, 12.5, 0.5, 9.5, Color.RED, Color.RED);
 		renderer.setXLabels(12);
 	    renderer.setYLabels(10);
 	    renderer.setShowGrid(true);
@@ -59,12 +59,12 @@ public class daily_price extends AbstractDemoChart{
 	    
 	    XYMultipleSeriesDataset dataset = buildDataset(titles, x, values);
 	    Intent intent = ChartFactory.getLineChartIntent(context, dataset, renderer,
-	            "罗非鱼价格变化图");
+	            "罗非鱼塘口价变化图");
 	    return intent;
 	}
 	
 	public View getchart(Context context){
-		String[] titles = new String[] { "塘口价", "批发价", "零售价"};
+		String[] titles = new String[] { "0.6~1.0(斤)", "1.0~1.6(斤)", "大于1.6(斤)"};
 		List<double[]> x = new ArrayList<double[]>();
 		List<double[]> values = new ArrayList<double[]>();
 		for (int i = 0; i < titles.length; i++) {
@@ -80,7 +80,7 @@ public class daily_price extends AbstractDemoChart{
 		for (int i = 0; i < length; i++) {
 			((XYSeriesRenderer) renderer.getSeriesRendererAt(i)).setFillPoints(true);
 		}
-		setChartSettings(renderer, "罗非鱼价格变化图", "月份", "单位：元/公斤", 0, 12.5, 0.5, 9.5, Color.RED, Color.RED);
+		setChartSettings(renderer, "罗非鱼塘口价变化图", "日期(号)", "单位：元/公斤", 0, 12.5, 0.5, 9.5, Color.RED, Color.RED);
 		renderer.setXLabels(12);
 	    renderer.setYLabels(10);
 	    renderer.setShowGrid(true);
