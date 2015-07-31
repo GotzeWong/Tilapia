@@ -12,5 +12,10 @@
     <string name="btn_cancel">取 消</string>
     <string name="btn_ok">确 定</string>
     <string name="cart_item_hint">购物车还是空的,快去选购吧~ !</string>
+    <string name="first_page">塘口价</string>
+    <string name="second_page">进口价</string>
+    <string name="third_page">批发</string>
+    <string name="forth_page">销售</string>
+    <string name="more_page">其它</string>
 
 </resources>
