@@ -20,31 +20,27 @@ import com.jnu.tilapia_activity.R;
 
 public class homepage_listview_adapter extends BaseExpandableListAdapter{
 	private LayoutInflater mInflater;
-	ArrayList<String> list_item_all;
-	ArrayList<String> list_item;
-//	String list_text[]={"大宿迁","小六安","小安阳"};
+	private ArrayList<String> list_item;
+	private ArrayList<double[]> price;
+	private String suffix=" 元",prefix=" ";
+	private data_provider provider;
+	private String showString;
     public homepage_listview_adapter(Context context){
         this.mInflater = LayoutInflater.from(context);
-        list_item_all=new data_provider().get_citylist();
-        list_item=list_item_all;
+        provider=new data_provider();
+        list_item=provider.get_citylist();
+        price=provider.get_daily_price();
+        showString="";
     }
     public void Update(String string){
-    	Log.i("update", string);
-    	if(string.length()==0){
-    		list_item=list_item_all;
-    		Log.i("update", string+"*");
-    	}
-    	else{
-    		list_item=new ArrayList<String>();
-    		if(list_item_all.contains(string))
-    			list_item.add(string);
-    		Log.i("update", string+"**");
-    	}
+    	showString=string;
     	notifyDataSetChanged();
     }
 	@Override
 	public int getGroupCount() {
-		return list_item.size();
+		if(showString.length()==0)
+			return list_item.size();
+		else return 1;
 	}
 	@Override
 	public int getChildrenCount(int groupPosition) {
@@ -73,9 +69,21 @@ public class homepage_listview_adapter extends BaseExpandableListAdapter{
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
-		convertView=mInflater.inflate(R.layout.list_content, parent, false);
-		TextView te=(TextView) convertView.findViewById(R.id.list_text);
+		if(showString.length()!=0){
+			groupPosition=list_item.indexOf(showString);
+		}
+		convertView=mInflater.inflate(R.layout.listview_childview, parent, false);
+		
+		TextView te,textView1,textView2,textView3;
+		te=(TextView) convertView.findViewById(R.id.list_text);
+		textView1=(TextView) convertView.findViewById(R.id.text_min);
+		textView2=(TextView) convertView.findViewById(R.id.text_mid);
+		textView3=(TextView) convertView.findViewById(R.id.text_max);
 		te.setText(list_item.get(groupPosition));
+		double[] mprice=price.get(groupPosition);
+		textView1.setText(prefix+mprice[0]+suffix);
+		textView2.setText(prefix+mprice[1]+suffix);
+		textView3.setText(prefix+mprice[2]+suffix);
 		ImageView iv=(ImageView) convertView.findViewById(R.id.list_goto);
 		if(isExpanded){
 			iv.setImageResource(R.drawable.goto_pull);
