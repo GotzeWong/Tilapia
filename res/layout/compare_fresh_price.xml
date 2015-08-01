@@ -9,138 +9,186 @@
         android:layout_width="match_parent"
     	android:layout_height="wrap_content"
     	android:orientation="horizontal"
-    	android:layout_margin="5dp"
+    	android:background="@drawable/bg_info"
+    	android:padding="5dp"
+	    android:layout_margin="3dp"
         >
-        
-        <TextView 
+        <LinearLayout 
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1.0"
-            android:textSize="20sp"
-            android:text="省份:"
-            android:gravity="right"
-            />
-        <Spinner 
-            android:id="@+id/spinner1"
-            android:layout_width="0dp"
-            android:layout_weight="1.0"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            />
-        <TextView 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_weight="1.0"
-            android:paddingLeft="10dp"
-            android:layout_gravity="center_vertical"
-            android:text="城市:"
-            android:gravity="right"
-            />
-        <Spinner 
-            android:id="@+id/spinner2"
-            android:layout_gravity="center_vertical"
-            android:layout_width="0dp"
-            android:layout_weight="1.0"
-            android:layout_height="40dp"
-            />
+            android:layout_weight="3.0"
+            android:orientation="vertical"
+            >
+            <LinearLayout 
+                android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:orientation="horizontal"
+                >
+                <TextView 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:textSize="17sp"
+		            android:text="省份:"
+		            />
+		        <Spinner 
+		            android:id="@+id/spinner1"
+		            android:layout_width="match_parent"
+		            android:layout_height="40dp"
+		            android:layout_gravity="center_vertical"
+		            android:background="@drawable/spinner_bg"
+		            />
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:orientation="horizontal"
+                >
+                <TextView 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:textSize="17sp"
+		            android:text="城市:"
+		            />
+		        <Spinner 
+		            android:id="@+id/spinner2"
+		            android:layout_gravity="center_vertical"
+		            android:layout_width="match_parent"
+		            android:layout_height="40dp"
+		            android:background="@drawable/spinner_bg"
+		            />
+            </LinearLayout>
+        </LinearLayout>
         <Button 
             android:id="@+id/button_add_city"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
             android:layout_weight="1.0"
             android:layout_gravity="center_vertical"
-            android:text="添加"
+            android:background="@drawable/keywords_btn"
+            android:text="添加比较"
+            android:textSize="17sp"
             />
     </LinearLayout>
-	<LinearLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_margin="5dp"
-	    android:orientation="horizontal"
-	    >
-        <TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="30dp"
-	        android:layout_gravity="center_vertical"
-	        android:text="已选择:"
-	        android:textSize="20sp"
-	        />
-        <LinearLayout 
-            android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:orientation="horizontal"
-            >
-		    <TextView 
-		        android:id="@+id/selected_1"
-		        android:layout_weight="1.0"
-		        android:layout_width="0dp"
-		        android:layout_height="wrap_content"
-		        android:text="ceshi"
-		        android:visibility="gone"
-		        android:gravity="center"
-		        android:textSize="20sp"
-		        android:layout_gravity="center_vertical"
-		        android:textColor="#00ff00"
-		        />
-		    <TextView 
-		        android:id="@+id/selected_2"
-		        android:layout_weight="1.0"
-		        android:layout_width="0dp"
-		        android:layout_height="wrap_content"
-		        android:text="ceshi"
-		        android:visibility="gone"
-		        android:gravity="center"
-		        android:textSize="20sp"
-		        android:layout_gravity="center_vertical"
-		        android:textColor="#ff0000"
-		        />
-		    <TextView 
-		        android:id="@+id/selected_3"
-		        android:layout_weight="1.0"
-		        android:layout_width="0dp"
-		        android:layout_height="wrap_content"
-		        android:text="ceshi"
-		        android:gravity="center"
-		        android:visibility="gone"
-		        android:layout_gravity="center_vertical"
-		        android:textColor="#0000ff"
-		        android:textSize="20sp"
-		        />
-        </LinearLayout>
-	    
-	</LinearLayout>
+    
 	<LinearLayout 
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:orientation="horizontal"
-	    android:layout_margin="5dp"
+	    android:background="@drawable/bg_info"
+	    android:padding="5dp"
+	    android:layout_margin="3dp"
 	    >
 	    <TextView 
-	        android:layout_width="0dp"
+	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:text="尺寸(斤):"
-	        android:gravity="right"
-	        android:layout_weight="1.0"
+	        android:gravity="center"
 	        android:layout_gravity="center_vertical"
-	        android:textSize="20sp"
+	        android:textSize="17sp"
 	        />
 	    <Spinner 
             android:id="@+id/spinner_choose_size"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1.0"
+            android:background="@drawable/spinner_bg"
+            android:layout_weight="2.25"
             />
 	    <Button 
 	        android:id="@+id/button_show_chart"
 	        android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
+            android:background="@drawable/upper_button_bg"
             android:text="OK"
-            android:layout_weight="2.0"
+            android:textSize="20sp"
+            android:layout_weight="1.0"
 	        />
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="5dp"
+	    android:layout_margin="3dp"
+	    android:background="@drawable/bg_info"
+	    android:orientation="horizontal"
+	    >
+        <TextView
+	        android:layout_width="0dp"
+	        android:layout_height="40dp"
+	        android:layout_weight="1.0"
+	        android:gravity="left|center_vertical"
+	        android:text="已选择:"
+	        android:textSize="17sp"
+	        />
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1.0"
+		    android:gravity="center"
+		    android:orientation="horizontal"
+            >
+            <TextView 
+		        android:id="@+id/selected_1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="8dp"
+		        android:layout_marginRight="8dp"
+		        android:drawableLeft="@drawable/status_deleted"
+		        android:background="@drawable/android_big_button_disable"
+		        android:text="ceshi"
+		        android:visibility="gone"
+		        android:gravity="center"
+		        android:textSize="15sp"
+		        android:textColor="#ffffff"
+		        />
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1.0"
+		    android:gravity="center"
+		    android:orientation="horizontal"
+            >
+            <TextView 
+		        android:id="@+id/selected_2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="8dp"
+		        android:layout_marginRight="8dp"
+		        android:drawableLeft="@drawable/status_deleted"
+		        android:background="@drawable/android_big_button_disable"
+		        android:text="ceshi"
+		        android:visibility="gone"
+		        android:gravity="center"
+		        android:textSize="15sp"
+		        android:textColor="#ffffff"
+		        />
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1.0"
+		    android:gravity="center"
+		    android:orientation="horizontal"
+            >
+            <TextView 
+		        android:id="@+id/selected_3"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="8dp"
+		        android:layout_marginRight="8dp"
+		        android:background="@drawable/android_big_button_disable"
+		        android:drawableLeft="@drawable/status_deleted"
+		        android:text="ceshi"
+		        android:visibility="gone"
+		        android:gravity="center"
+		        android:textSize="15sp"
+		        android:textColor="#ffffff"
+		        />
+        </LinearLayout>
 	</LinearLayout>
 </LinearLayout>

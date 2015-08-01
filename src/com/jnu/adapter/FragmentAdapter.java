@@ -1,8 +1,8 @@
 package com.jnu.adapter;
 
-import com.jnu.fragment.News_Fragment;
-import com.jnu.fragment.CN_Market_Fragment;
-import com.jnu.fragment.Foreign_Fragment;
+import com.jnu.fragment.Sell_Fragment;
+import com.jnu.fragment.Import_Fragment;
+import com.jnu.fragment.Wholesale_Fragment;
 import com.jnu.fragment.Homepage_Fragment;
 import com.jnu.fragment.More_Fragment;
 import com.jnu.tilapia_activity.MainActivity;
@@ -24,13 +24,13 @@ public class FragmentAdapter extends FragmentPagerAdapter{
 			Homepage_Fragment homeFragment = new Homepage_Fragment();
 			return homeFragment;
 		case MainActivity.TAB_PAGE1:
-			CN_Market_Fragment categoryFragment = new CN_Market_Fragment();
+			Import_Fragment categoryFragment = new Import_Fragment();
 			return categoryFragment;
 		case MainActivity.TAB_PAGE2:
-			Foreign_Fragment carFragment = new Foreign_Fragment();
+			Wholesale_Fragment carFragment = new Wholesale_Fragment();
 			return carFragment;
 		case MainActivity.TAB_PAGE3:
-			News_Fragment buyFragment = new News_Fragment();
+			Sell_Fragment buyFragment = new Sell_Fragment();
 			return buyFragment;
 		case MainActivity.TAB_PAGE4:
 			More_Fragment moreFragment = new More_Fragment();

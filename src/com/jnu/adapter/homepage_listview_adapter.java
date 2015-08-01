@@ -95,9 +95,9 @@ public class homepage_listview_adapter extends BaseExpandableListAdapter{
 			boolean isLastChild, View convertView, ViewGroup parent) {
 //		convertView=mInflater.inflate(R.layout.chart, parent, false);
 		LinearLayout ans=(LinearLayout) mInflater.inflate(R.layout.chart, parent, false);
-		View view=new daily_price().getchart(parent.getContext());
+		View view=new daily_price().getchartsimple(parent.getContext());
 		view.setOnClickListener(new chart_change_to_detail_listenner());
-		view.setTag("宿迁");
+		view.setTag(groupPosition);
 		ans.addView(view);
 		parent.requestFocus();
 		return ans;

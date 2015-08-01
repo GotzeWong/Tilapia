@@ -66,12 +66,9 @@ public class compare_fresh_price extends Activity{
 		initadapter();
 		setadapter();
 		setlistener();
-		chart=(GraphicalView) new daily_price().getchart(context);
-		chart.setOnTouchListener(chart_ontouchListener);
-		chart.setOnClickListener(showTagListener);
-		layout.addView(chart);
+		addview();
 	}
-	public void initview(){
+	void initview(){
 		spinner1=(Spinner) findViewById(R.id.spinner1);
 		spinner2=(Spinner) findViewById(R.id.spinner2);
 		spinner_size=(Spinner) findViewById(R.id.spinner_choose_size);
@@ -83,7 +80,7 @@ public class compare_fresh_price extends Activity{
 		layout=(LinearLayout) findViewById(R.id.compare_layout);
 		
 	}
-	public void initlistener(){
+	void initlistener(){
 		spinner1_listener=new OnItemSelectedListener() {
 
 			@Override
@@ -199,7 +196,7 @@ public class compare_fresh_price extends Activity{
 					View tag_layout = inflater.inflate(R.layout.chart_tag, null);
 
 					TextView tv = (TextView) tag_layout.findViewById(R.id.tag);
-					tv.setText("您点击了"+seriesSelection.getXValue()+","+seriesSelection.getValue());
+					tv.setText("价格:"+seriesSelection.getValue());
 
 					ImageView arrow_left = (ImageView) tag_layout
 							.findViewById(R.id.arrowL);
@@ -258,7 +255,7 @@ public class compare_fresh_price extends Activity{
 			}
 		};
 	}
-	public void initadapter(){
+	void initadapter(){
 		adapter1=new ArrayAdapter<String>(context, 
 				android.R.layout.simple_spinner_item, 
 				provider.get_Provinces());
@@ -273,17 +270,23 @@ public class compare_fresh_price extends Activity{
 				provider.get_size());
 		adapter_size.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 	}
-	public void setadapter(){
+	void setadapter(){
 		spinner1.setAdapter(adapter1);
 		spinner2.setAdapter(adapter2);
 		spinner_size.setAdapter(adapter_size);
 	}
-	public void setlistener(){
+	void setlistener(){
 		spinner1.setOnItemSelectedListener(spinner1_listener);
 		button_add.setOnClickListener(button_listener);
 		button_ok.setOnClickListener(button_listener_show);
 		textView1.setOnClickListener(textview_hide);
 		textView2.setOnClickListener(textview_hide);
 		textView3.setOnClickListener(textview_hide);
+	}
+	void addview(){
+		chart=(GraphicalView) new daily_price().getchart(context);
+		chart.setOnTouchListener(chart_ontouchListener);
+		chart.setOnClickListener(showTagListener);
+		layout.addView(chart);
 	}
 }

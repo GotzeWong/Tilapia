@@ -15,18 +15,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
         >
         <Spinner 
             android:id="@+id/spinner_size"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1.0"
+            android:background="@drawable/spinner_bg"
             />
         <Spinner 
             android:id="@+id/spinner_date"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1.0"
+            android:background="@drawable/spinner_bg"
             />
     </LinearLayout>
     <LinearLayout 
@@ -34,12 +39,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5.0"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
         android:orientation="vertical"
         ></LinearLayout>
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.0"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/icon_fish1"
         android:orientation="horizontal"
         >
         <LinearLayout 
@@ -53,12 +63,14 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="match_parent"
 	            android:gravity="center"
+	            android:textSize="15sp"
 	            android:text="最高价："
 	            />
 	        <TextView 
 	            android:layout_width="wrap_content"
 	            android:layout_height="match_parent"
 	            android:gravity="center"
+	            android:textSize="17sp"
 	            android:text="6.2"
 	            />
         </LinearLayout>
@@ -73,12 +85,14 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="match_parent"
 	            android:gravity="center"
+	            android:textSize="15sp"
 	            android:text="最低价："
 	            />
 	        <TextView 
 	            android:layout_width="wrap_content"
 	            android:layout_height="match_parent"
 	            android:gravity="center"
+	            android:textSize="17sp"
 	            android:text="6.2"
 	            />
         </LinearLayout>
@@ -93,12 +107,14 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="match_parent"
 	            android:gravity="center"
+	            android:textSize="15sp"
 	            android:text="平均价："
 	            />
 	        <TextView 
 	            android:layout_width="wrap_content"
 	            android:layout_height="match_parent"
 	            android:gravity="center"
+	            android:textSize="17sp"
 	            android:text="6.2"
 	            />
         </LinearLayout>

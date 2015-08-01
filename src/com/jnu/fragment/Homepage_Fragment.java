@@ -90,7 +90,7 @@ public class Homepage_Fragment extends Fragment {
 						return;
 					}
 					String outString="";
-					String warning[]={" 0.6~1.0 预警:"," 1.0~1.6预警"," >1.6预警"	};
+					String warning[]={" 0.6~1.0  （斤）预警:"," 1.0~1.6 （斤）预警"," >1.6 （斤）预警"	};
 					data_provider provider=new data_provider();
 					ArrayList<String> citylist=provider.get_citylist();
 					ArrayList<double[]> price=provider.get_daily_price();
@@ -102,7 +102,7 @@ public class Homepage_Fragment extends Fragment {
 								tString+=citylist.get(i)+",";
 						}
 						if(tString.length()!=0)
-							outString+=warning[k]+"\n"+tString+"\n";
+							outString+="\n"+warning[k]+"\n"+tString+"\n\n";
 					}
 					new AlertDialog.Builder(context)
 	   				   .setTitle("warning~")

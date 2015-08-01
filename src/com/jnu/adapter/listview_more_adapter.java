@@ -10,9 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 public class listview_more_adapter extends BaseAdapter{
 	private LayoutInflater mInflater;
+	private String[] listStrings={"设置预警值","联系客服","联系客服","联系客服","联系客服","联系客服","关于..."};
 	public listview_more_adapter(Context context){
 		mInflater=LayoutInflater.from(context);
 	}
@@ -43,6 +45,18 @@ public class listview_more_adapter extends BaseAdapter{
 		if(position==2||position==5){
 			return mInflater.inflate(R.layout.list_gap, parent, false);
 		}
-		return mInflater.inflate(R.layout.list_others_row, parent, false);
+		View view=mInflater.inflate(R.layout.list_others_row, parent, false);
+		TextView textView=(TextView) view.findViewById(R.id.listview_morefragment_item);
+		textView.setText(listStrings[position]);
+		if(position==0||position==3){
+			textView.setBackgroundResource(R.drawable.item_first);
+		}
+		else if(position==6){
+			textView.setBackgroundResource(R.drawable.item_one);
+		}
+		else{
+			textView.setBackgroundResource(R.drawable.item_last);
+		}
+		return view;
 	}
 }

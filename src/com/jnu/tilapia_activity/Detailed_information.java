@@ -1,9 +1,12 @@
 package com.jnu.tilapia_activity;
 
+import java.util.ArrayList;
+
 import org.achartengine.GraphicalView;
 import org.achartengine.model.SeriesSelection;
 
 import com.jnu.chart.daily_price;
+import com.jnu.data_provider.data_provider;
 
 import android.app.Activity;
 import android.content.Context;
@@ -37,6 +40,10 @@ public class Detailed_information extends Activity {
 	public static int YOFFSET=150;
 	private String[] size={"0.6~1.0","1.0~1.6",">1.6"},
 					 date={"最近7天","最近15天","最近30天","最近1年"};
+	private data_provider provider;
+	private ArrayList<String> citylList;
+	private ArrayList<double[]> priceList;
+	private int city_tag;
 	
 	private OnTouchListener chart_ontouchListener;
 	private OnClickListener showTagListener;
@@ -47,13 +54,18 @@ public class Detailed_information extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.detail_information_layout);
 		context=this;
+		provider=new data_provider();
+		citylList=provider.get_citylist();
+		priceList=provider.get_daily_price();
+		Intent intent=getIntent();
+		city_tag=intent.getIntExtra("name", -1);
 		initview();
 		initlistener();
 		initadapter();
 		addview();
 		addadapter();
-//		Intent intent=getIntent();
-//		Toast.makeText(this, intent.getStringExtra("name"), Toast.LENGTH_SHORT).show();
+		
+//		Toast.makeText(this, String.valueOf(intent.getIntExtra("name", -1)), Toast.LENGTH_SHORT).show();
 	}
 	void initview(){
 		layout_today=(LinearLayout) findViewById(R.id.listcontent_holder);
@@ -86,7 +98,7 @@ public class Detailed_information extends Activity {
 					View tag_layout = inflater.inflate(R.layout.chart_tag, null);
 
 					TextView tv = (TextView) tag_layout.findViewById(R.id.tag);
-					tv.setText("您点击了"+seriesSelection.getXValue()+","+seriesSelection.getValue());
+					tv.setText("价格:"+seriesSelection.getValue());
 
 					ImageView arrow_left = (ImageView) tag_layout
 							.findViewById(R.id.arrowL);
@@ -159,6 +171,15 @@ public class Detailed_information extends Activity {
 	
 	void addview(){
 		View view=getLayoutInflater().inflate(R.layout.listview_childview, null);
+		TextView textView1,textView2,textView3;
+		TextView textView=(TextView) view.findViewById(R.id.list_text);
+		textView1=(TextView) view.findViewById(R.id.text_min);
+		textView2=(TextView) view.findViewById(R.id.text_mid);
+		textView3=(TextView) view.findViewById(R.id.text_max);
+		textView.setText(citylList.get(city_tag));
+		textView1.setText(String.valueOf(priceList.get(city_tag)[0]));
+		textView2.setText(String.valueOf(priceList.get(city_tag)[1]));
+		textView3.setText(String.valueOf(priceList.get(city_tag)[2]));
 		layout_today.addView(view);
 		chart=(GraphicalView) new daily_price().getchart(context);
 		chart.setOnTouchListener(chart_ontouchListener);
