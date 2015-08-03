@@ -171,6 +171,8 @@ public class Detailed_information extends Activity {
 	
 	void addview(){
 		View view=getLayoutInflater().inflate(R.layout.listview_childview, null);
+		View list_goto=view.findViewById(R.id.list_goto);
+		list_goto.setVisibility(View.GONE);
 		TextView textView1,textView2,textView3;
 		TextView textView=(TextView) view.findViewById(R.id.list_text);
 		textView1=(TextView) view.findViewById(R.id.text_min);

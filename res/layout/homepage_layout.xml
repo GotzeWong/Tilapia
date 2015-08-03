@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingBottom="50dp">
+    
+    <EditText 
+        android:id="@+id/text_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:singleLine="true"
+        android:layout_margin="2dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="请输入城市"
+        android:textSize="15sp"
+        android:imeOptions="actionSearch"
+        />
+    <ExpandableListView 
+        android:id="@+id/expandable_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_search"
+        android:groupIndicator="@null"
+        android:drawSelectorOnTop="false"
+        >
+    </ExpandableListView>
+	
+    <ImageView
+        android:id="@+id/filter"
+        style="@style/filter_style"
+        android:contentDescription="@string/filter_desc" />
+    
+</RelativeLayout>

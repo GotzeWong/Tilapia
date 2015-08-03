@@ -2,6 +2,7 @@ package com.jnu.adapter;
 
 import java.util.ArrayList;
 
+import android.R.bool;
 import android.content.Context;
 import android.text.style.UpdateAppearance;
 import android.util.Log;
@@ -15,6 +16,8 @@ import android.widget.TextView;
 
 import com.jnu.chart.daily_price;
 import com.jnu.data_provider.data_provider;
+import com.jnu.data_provider.user_setting;
+import com.jnu.fragment.Homepage_Fragment;
 import com.jnu.listenner.chart_change_to_detail_listenner;
 import com.jnu.tilapia_activity.R;
 
@@ -66,6 +69,7 @@ public class homepage_listview_adapter extends BaseExpandableListAdapter{
 	public boolean hasStableIds() {
 		return false;
 	}
+	
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
@@ -84,6 +88,30 @@ public class homepage_listview_adapter extends BaseExpandableListAdapter{
 		textView1.setText(prefix+mprice[0]+suffix);
 		textView2.setText(prefix+mprice[1]+suffix);
 		textView3.setText(prefix+mprice[2]+suffix);
+		
+		boolean tag=false;
+		double max[]=user_setting.max_fresh_price,min[]=user_setting.min_fresh_price;
+		ImageView tempview;
+		if(mprice[0]>max[0]||mprice[0]<min[0]){
+			tag=true;
+			tempview=(ImageView) convertView.findViewById(R.id.circle1);
+			tempview.setImageResource(R.drawable.circle_warning);
+		}
+		if(mprice[1]>max[1]||mprice[1]<min[1]){
+			tag=true;
+			tempview=(ImageView) convertView.findViewById(R.id.circle2);
+			tempview.setImageResource(R.drawable.circle_warning);
+		}
+		if(mprice[2]>max[2]||mprice[2]<min[2]){
+			tag=true;
+			tempview=(ImageView) convertView.findViewById(R.id.circle3);
+			tempview.setImageResource(R.drawable.circle_warning);
+		}
+		if(tag){
+			ImageView imageView=(ImageView) convertView.findViewById(R.id.icon_monitor);
+			imageView.setImageResource(R.drawable.icon_monitor_warning);
+		}
+		
 		ImageView iv=(ImageView) convertView.findViewById(R.id.list_goto);
 		if(isExpanded){
 			iv.setImageResource(R.drawable.goto_pull);
@@ -99,7 +127,6 @@ public class homepage_listview_adapter extends BaseExpandableListAdapter{
 		view.setOnClickListener(new chart_change_to_detail_listenner());
 		view.setTag(groupPosition);
 		ans.addView(view);
-		parent.requestFocus();
 		return ans;
 	}
 	@Override

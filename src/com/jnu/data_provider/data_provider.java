@@ -12,7 +12,7 @@ public class data_provider {
 	//每个地方当日三种价格
 	double[] price_1={3.9, 3.5, 3.3, 3.6, 4.0, 4.2, 2.9, 3.5, 3.4, 3.8, 3.3, 3.4};
 	double[] price_2={4.9, 5.1, 4.7, 4.8, 4.8, 5.0, 5.3, 5.6, 5.4, 5.5, 5.3, 5.2};
-	double[] price_3={4.2, 5.4, 4.1, 4.9, 5.2, 5.3, 5.2, 5.6, 5.8, 5.9, 5.2, 5.6};
+	double[] price_3={5.2, 5.4, 4.1, 4.9, 5.2, 5.3, 5.2, 5.6, 5.8, 5.9, 5.2, 5.6};
 	public data_provider(){
 		citylist=new ArrayList<String>();
 		month_price=new ArrayList<double[]>();
