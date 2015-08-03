@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">tilapia</string>
-    <string name="ActivityMainTitle">tilapia</string>
+    <string name="app_name">罗非鱼产业预警系统</string>
+    <string name="ActivityMainTitle">>罗非鱼产业预警系统</string>
     <string name="main_navigation_home">首页</string>
     <string name="main_navigation_catagory">第一页</string>
     <string name="main_navigation_car">第二页</string>
