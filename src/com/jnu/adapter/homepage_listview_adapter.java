@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.R.bool;
 import android.content.Context;
+import android.graphics.Color;
 import android.text.style.UpdateAppearance;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -95,15 +96,18 @@ public class homepage_listview_adapter extends BaseExpandableListAdapter{
 		if(mprice[0]>max[0]||mprice[0]<min[0]){
 			tag=true;
 			tempview=(ImageView) convertView.findViewById(R.id.circle1);
+			textView1.setTextColor(Color.RED);
 			tempview.setImageResource(R.drawable.circle_warning);
 		}
 		if(mprice[1]>max[1]||mprice[1]<min[1]){
 			tag=true;
+			textView2.setTextColor(Color.RED);
 			tempview=(ImageView) convertView.findViewById(R.id.circle2);
 			tempview.setImageResource(R.drawable.circle_warning);
 		}
 		if(mprice[2]>max[2]||mprice[2]<min[2]){
 			tag=true;
+			textView3.setTextColor(Color.RED);
 			tempview=(ImageView) convertView.findViewById(R.id.circle3);
 			tempview.setImageResource(R.drawable.circle_warning);
 		}
