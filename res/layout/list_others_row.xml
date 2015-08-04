@@ -6,11 +6,13 @@
     
     <TextView 
         android:id="@+id/listview_morefragment_item"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:text="哈哈哈哈"
-        android:paddingLeft="10dp"
-        android:gravity="left|center_vertical"
+        android:paddingLeft="20dp"
+        android:textSize="17sp"
+        android:background="@drawable/item_first"
+        android:gravity="center_vertical"
         />
 
 </LinearLayout>
